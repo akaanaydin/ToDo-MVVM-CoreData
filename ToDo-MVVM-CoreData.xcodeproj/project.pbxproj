@@ -55,6 +55,7 @@
 				B91DB4B5281B1B790003D962 /* Date+Extensions.swift */,
 			);
 			name = Extensions;
+			path = "ToDo-MVVM-CoreData";
 			sourceTree = "<group>";
 		};
 		B91DB4B9281B39380003D962 /* AddNewTask */ = {
@@ -69,7 +70,11 @@
 		B96B2DD52817455F00E9C24A = {
 			isa = PBXGroup;
 			children = (
-				B96B2DE02817455F00E9C24A /* ToDo-MVVM-CoreData */,
+				B91DB4B4281B1B4E0003D962 /* Extensions */,
+				B96B2DFC2817463800E9C24A /* CoraDataHelpers */,
+				B96B2DFB2817462100E9C24A /* View */,
+				B96B2DFA281745FB00E9C24A /* Storyboards */,
+				B96B2DF82817459600E9C24A /* Settings */,
 				B96B2DDF2817455F00E9C24A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,19 +87,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B96B2DE02817455F00E9C24A /* ToDo-MVVM-CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				B91DB4B9281B39380003D962 /* AddNewTask */,
-				B91DB4B4281B1B4E0003D962 /* Extensions */,
-				B96B2DFC2817463800E9C24A /* CoraDataHelpers */,
-				B96B2DFB2817462100E9C24A /* View */,
-				B96B2DFA281745FB00E9C24A /* Storyboards */,
-				B96B2DF82817459600E9C24A /* Settings */,
-			);
-			path = "ToDo-MVVM-CoreData";
-			sourceTree = "<group>";
-		};
 		B96B2DF82817459600E9C24A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +96,7 @@
 				B96B2DF22817455F00E9C24A /* Info.plist */,
 			);
 			name = Settings;
+			path = "ToDo-MVVM-CoreData";
 			sourceTree = "<group>";
 		};
 		B96B2DFA281745FB00E9C24A /* Storyboards */ = {
@@ -113,15 +106,18 @@
 				B96B2DEF2817455F00E9C24A /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			path = "ToDo-MVVM-CoreData";
 			sourceTree = "<group>";
 		};
 		B96B2DFB2817462100E9C24A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B91DB4B9281B39380003D962 /* AddNewTask */,
+				B9CC9BAF281B417500F96C7B /* TableCell */,
 				B96B2DE52817455F00E9C24A /* TodoListController.swift */,
-				B91DB4B2281B19130003D962 /* ToDoTableCell.swift */,
 			);
 			name = View;
+			path = "ToDo-MVVM-CoreData";
 			sourceTree = "<group>";
 		};
 		B96B2DFC2817463800E9C24A /* CoraDataHelpers */ = {
@@ -131,6 +127,15 @@
 				B91DB4B7281B344B0003D962 /* CoreDataManager.swift */,
 			);
 			name = CoraDataHelpers;
+			path = "ToDo-MVVM-CoreData";
+			sourceTree = "<group>";
+		};
+		B9CC9BAF281B417500F96C7B /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				B91DB4B2281B19130003D962 /* ToDoTableCell.swift */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
