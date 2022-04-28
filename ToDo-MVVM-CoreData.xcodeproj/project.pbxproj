@@ -35,7 +35,7 @@
 		B96B2DEB2817455F00E9C24A /* ToDo_MVVM_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo_MVVM_CoreData.xcdatamodel; sourceTree = "<group>"; };
 		B96B2DED2817455F00E9C24A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B96B2DF02817455F00E9C24A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B96B2DF22817455F00E9C24A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B96B2DF22817455F00E9C24A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ToDo-MVVM-CoreData/ToDo-MVVM-CoreData/Core/Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,32 +49,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B91DB4B4281B1B4E0003D962 /* Extensions */ = {
+		B95872B1281B4F7400528B3C /* ToDo-MVVM-CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				B91DB4B5281B1B790003D962 /* Date+Extensions.swift */,
+				B95872B4281B502700528B3C /* Features */,
+				B95872B2281B4FC200528B3C /* Core */,
 			);
-			name = Extensions;
-			path = "ToDo-MVVM-CoreData";
+			name = "ToDo-MVVM-CoreData";
+			path = "ToDo-MVVM-CoreData/ToDo-MVVM-CoreData";
 			sourceTree = "<group>";
 		};
-		B91DB4B9281B39380003D962 /* AddNewTask */ = {
+		B95872B2281B4FC200528B3C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B96B2DF22817455F00E9C24A /* Info.plist */,
+				B95872B3281B4FE000528B3C /* Storyboards */,
+				B96B2DE12817455F00E9C24A /* AppDelegate.swift */,
+				B96B2DE32817455F00E9C24A /* SceneDelegate.swift */,
+				B96B2DED2817455F00E9C24A /* Assets.xcassets */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B95872B3281B4FE000528B3C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B96B2DE72817455F00E9C24A /* Main.storyboard */,
+				B96B2DEF2817455F00E9C24A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B95872B4281B502700528B3C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B95872B8281B506900528B3C /* Extensions */,
+				B95872B7281B505200528B3C /* CoreDataHelpers */,
+				B95872B5281B503000528B3C /* View */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B95872B5281B503000528B3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B96B2DE52817455F00E9C24A /* TodoListController.swift */,
+				B9CC9BAF281B417500F96C7B /* TableCell */,
+				B95872B6281B503600528B3C /* AddNewTask */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B95872B6281B503600528B3C /* AddNewTask */ = {
 			isa = PBXGroup;
 			children = (
 				B91DB4BA281B396D0003D962 /* AddNewTaskController.swift */,
 				B91DB4BC281B3C740003D962 /* AddNewTaskViewModel.swift */,
 			);
-			name = AddNewTask;
+			path = AddNewTask;
+			sourceTree = "<group>";
+		};
+		B95872B7281B505200528B3C /* CoreDataHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				B96B2DEA2817455F00E9C24A /* ToDo_MVVM_CoreData.xcdatamodeld */,
+				B91DB4B7281B344B0003D962 /* CoreDataManager.swift */,
+			);
+			path = CoreDataHelpers;
+			sourceTree = "<group>";
+		};
+		B95872B8281B506900528B3C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B91DB4B5281B1B790003D962 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B96B2DD52817455F00E9C24A = {
 			isa = PBXGroup;
 			children = (
-				B91DB4B4281B1B4E0003D962 /* Extensions */,
-				B96B2DFC2817463800E9C24A /* CoraDataHelpers */,
-				B96B2DFB2817462100E9C24A /* View */,
-				B96B2DFA281745FB00E9C24A /* Storyboards */,
-				B96B2DF82817459600E9C24A /* Settings */,
+				B95872B1281B4F7400528B3C /* ToDo-MVVM-CoreData */,
 				B96B2DDF2817455F00E9C24A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,49 +140,6 @@
 				B96B2DDE2817455F00E9C24A /* ToDo-MVVM-CoreData.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B96B2DF82817459600E9C24A /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				B96B2DE12817455F00E9C24A /* AppDelegate.swift */,
-				B96B2DE32817455F00E9C24A /* SceneDelegate.swift */,
-				B96B2DED2817455F00E9C24A /* Assets.xcassets */,
-				B96B2DF22817455F00E9C24A /* Info.plist */,
-			);
-			name = Settings;
-			path = "ToDo-MVVM-CoreData";
-			sourceTree = "<group>";
-		};
-		B96B2DFA281745FB00E9C24A /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				B96B2DE72817455F00E9C24A /* Main.storyboard */,
-				B96B2DEF2817455F00E9C24A /* LaunchScreen.storyboard */,
-			);
-			name = Storyboards;
-			path = "ToDo-MVVM-CoreData";
-			sourceTree = "<group>";
-		};
-		B96B2DFB2817462100E9C24A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B91DB4B9281B39380003D962 /* AddNewTask */,
-				B9CC9BAF281B417500F96C7B /* TableCell */,
-				B96B2DE52817455F00E9C24A /* TodoListController.swift */,
-			);
-			name = View;
-			path = "ToDo-MVVM-CoreData";
-			sourceTree = "<group>";
-		};
-		B96B2DFC2817463800E9C24A /* CoraDataHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				B96B2DEA2817455F00E9C24A /* ToDo_MVVM_CoreData.xcdatamodeld */,
-				B91DB4B7281B344B0003D962 /* CoreDataManager.swift */,
-			);
-			name = CoraDataHelpers;
-			path = "ToDo-MVVM-CoreData";
 			sourceTree = "<group>";
 		};
 		B9CC9BAF281B417500F96C7B /* TableCell */ = {
@@ -366,7 +378,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Y58TRUZ8U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ToDo-MVVM-CoreData/Info.plist";
+				INFOPLIST_FILE = "ToDo-MVVM-CoreData/ToDo-MVVM-CoreData/Core/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -394,7 +406,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Y58TRUZ8U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ToDo-MVVM-CoreData/Info.plist";
+				INFOPLIST_FILE = "ToDo-MVVM-CoreData/ToDo-MVVM-CoreData/Core/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
