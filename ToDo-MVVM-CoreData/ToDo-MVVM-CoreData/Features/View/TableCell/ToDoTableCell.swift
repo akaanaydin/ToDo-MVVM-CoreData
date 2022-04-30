@@ -16,17 +16,25 @@ class ToDoTableCell: UITableViewCell {
     var todo: ToDo? {
         didSet {
             if let todo = todo {
-                if todo.completed == false {
+                if todo.completedTask == false {
                     taskNameLabel.text = todo.name
                     taskDueDate.text = String(format: "Due On: %@", todo.dueOn!.toString(format: "MMM dd, yy"))
                     taskCompletedDate.text = "Yet to be completed."
                 }else {
-                    taskNameLabel.text = todo.name
-                    taskDueDate.text = String(format: "Due On: %@", todo.dueOn!.toString(format: "MMM dd, yy"))
+                    taskNameLabel.attributedText = todo.name?.strikeThrough()
+                    taskDueDate.attributedText = String(format: "Due On: %@", todo.dueOn!.toString(format: "MMM dd, yy")).strikeThrough()
                     taskCompletedDate.text = String(format: "Completed On: %@", todo.completedOn!.toString(format: "MMM dd, yy"))
                 }
             }
         }
+    }
+    override func prepareForReuse() {
+        taskNameLabel.attributedText = taskNameLabel.text?.removeAttributedText()
+        taskNameLabel.text = ""
+        taskDueDate.attributedText = taskDueDate.text?.removeAttributedText()
+        taskDueDate.text = ""
+        taskCompletedDate.text = ""
+        super.prepareForReuse()
     }
     
     override func awakeFromNib() {
